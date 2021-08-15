@@ -41,6 +41,12 @@ public class LinkedList {
     void printHead(){
         System.out.println(head.data);
     }
+
+    void printLinkedList() {
+        for (Node i = head; i != null; i = i.next) {
+            System.out.println(i.data);
+        }
+    }
 }
 
 
