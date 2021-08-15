@@ -6,7 +6,7 @@ public class Main {
         LinkedList<String> linkedList = new LinkedList();
         linkedList.insertAtEnd("ASHU");
         linkedList.insertAtEnd("Abhi");
-        linkedList.insertAtEnd("Suhana");
+        linkedList.insertAtEnd("patel");
 
 
         linkedList.printLinkedList();
