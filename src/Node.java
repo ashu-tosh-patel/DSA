@@ -1,12 +1,12 @@
-class Node {
-    public int data;
+class Node<Type> {
+    public Type data;
     public Node next;
 
-    Node(int d) {
+    Node(Type d) {
         data = d;
     }
 
-    Node(int d, Node n) {
+    Node(Type d, Node n) {
         data = d;
         next = n;
     }
