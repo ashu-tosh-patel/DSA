@@ -8,10 +8,10 @@ public class Main {
 
         linkedList.printLinkedList();
 
-//        linkedList.insertAtStart(0);
-//
-//        System.out.println("changed Linked List:");
-//        linkedList.printLinkedList();
+        linkedList.insertAtStart(0);
+
+        System.out.println("changed Linked List:");
+        linkedList.printLinkedList();
 
         linkedList.insertAtPosition(4,8);
 

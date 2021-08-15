@@ -38,10 +38,8 @@ public class LinkedList {
         temp.next = new Node(d,temp.next);
     }
 
-    void printLinkedList() {
-        for (Node i = head; i != null; i = i.next) {
-            System.out.println(i.data);
-        }
+    void printHead(){
+        System.out.println(head.data);
     }
 }
 
