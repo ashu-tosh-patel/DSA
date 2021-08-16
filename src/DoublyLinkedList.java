@@ -1,12 +1,32 @@
-public class LinkedList <Type> {
+public class DoublyLinkedList<Type> {
+    class Node<Type> {
+        public Type data;
+        public Node next,prev;
+
+        Node(Type d) {
+            data = d;
+        }
+
+        Node(Type d, Node n) {
+            data = d;
+            next = n;
+        }
+
+        public Node() {
+
+        }
+    }
+
+
+
     public Node<Type> head;
     private int size;
 
-    LinkedList() {
+    DoublyLinkedList() {
         size = 0;
     }
 
-    LinkedList(Type d) {
+    DoublyLinkedList(Type d) {
         head = new Node<Type>(d);
         size = 1;
     }
@@ -31,7 +51,9 @@ public class LinkedList <Type> {
             Node<Type> i = head;
             while (i.next != null)
                 i = i.next;
-            i.next = new Node<Type>(d);
+            Node newNode = new Node<Type>(d);
+            newNode.prev = i;
+            i.next = newNode ;
         }
         size++;
 
@@ -41,12 +63,14 @@ public class LinkedList <Type> {
     void insertAtStart(Type d) {
         Node<Type> temp = new Node<Type>(d);
         temp.next = head;
+        head.prev = temp;
         head = temp;
         size++;
     }
 
     void deleteAtStart() {
         head = head.next;
+        head.prev = null;
         size--;
     }
 
@@ -99,12 +123,13 @@ public class LinkedList <Type> {
     }
 
 
-    void printLinkedList() {
+    void printDoublyLinkedList() {
         for (Node<Type> i = head; i != null; i = i.next) {
             System.out.print(i.data+" ");
         }
         System.out.println();
     }
+
+
+
 }
-
-
