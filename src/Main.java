@@ -1,17 +1,19 @@
-import java.util.List;
+import java.util.*;
+import java.util.LinkedList;
 
 public class Main {
     public static void main(String[] args) {
 
-        LinkedList<String> linkedList = new LinkedList();
-        linkedList.insertAtEnd("ASHU");
-        linkedList.insertAtEnd("Abhi");
-        linkedList.insertAtEnd("Suhana");
+
+        LinkedList<Integer> list = new LinkedList<>();
+        Deque<Integer> queue = new LinkedList<>();
+        for (int i = 0; i < 11; i++) {
+            queue.add(i*10);
+queue.
+        }
 
 
-        linkedList.printLinkedList();
-
-
-
-    }
+        System.out.println(queue.poll());
+        System.out.println(queue.poll());
+        System.out.println(queue.poll());}
 }

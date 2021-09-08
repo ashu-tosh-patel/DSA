@@ -1,6 +1,6 @@
 public class LinkedList <Type> {
-    Node<Type> head;
-    int size;
+    public Node<Type> head;
+    private int size;
 
     LinkedList() {
         size = 0;
@@ -101,8 +101,9 @@ public class LinkedList <Type> {
 
     void printLinkedList() {
         for (Node<Type> i = head; i != null; i = i.next) {
-            System.out.println(i.data);
+            System.out.print(i.data+" ");
         }
+        System.out.println();
     }
 }
 
