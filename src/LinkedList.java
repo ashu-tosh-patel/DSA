@@ -49,6 +49,7 @@ public class LinkedList <Type> {
         head = head.next;
         size--;
     }
+    //comment
 
     void deleteAt(int pos) {
         Node<Type> temp = head;
