@@ -11,4 +11,5 @@ public class Array {
         for (int i : a)
             System.out.print(i + " ");
     }
+    
 }
