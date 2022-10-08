@@ -49,30 +49,7 @@ public class LinkedList <Type> {
         head = head.next;
         size--;
     }
-    //comment
-
-    void deleteAt(int pos) {
-        Node<Type> temp = head;
-        int count = 1;
-        while (count != pos - 1) {
-            count++;
-            temp = temp.next;
-        }
-        temp.next = temp.next.next;
-        size--;
-    }
-
-    void insertAt(int pos, Type d) {
-        Node<Type> temp = head;
-        int count = 1;
-        while (count != pos - 1) {
-            count++;
-            temp = temp.next;
-
-        }
-        temp.next = new Node<Type>(d, temp.next);
-        size++;
-    }
+   
 
     int search(Type val) {
         int pos = 0;
@@ -103,6 +80,31 @@ public class LinkedList <Type> {
             System.out.print(i.data+" ");
         }
         System.out.println();
+    }
+    
+     //comment
+
+    void deleteAt(int pos) {
+        Node<Type> temp = head;
+        int count = 1;
+        while (count != pos - 1) {
+            count++;
+            temp = temp.next;
+        }
+        temp.next = temp.next.next;
+        size--;
+    }
+
+    void insertAt(int pos, Type d) {
+        Node<Type> temp = head;
+        int count = 1;
+        while (count != pos - 1) {
+            count++;
+            temp = temp.next;
+
+        }
+        temp.next = new Node<Type>(d, temp.next);
+        size++;
     }
 }
 
