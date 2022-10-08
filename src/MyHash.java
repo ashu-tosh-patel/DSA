@@ -8,28 +8,7 @@ public class MyHash {
         for (int i = 0; i < cap; i++)
             arr[i] = -1;
     }
-
-    //hash function
-    int hash(int key) {
-        return key % cap;
-    }
-
-    //searching using hashing
-    boolean search(int key) {
-        int h = hash(key);
-        int i = h;
-        while (arr[i] != -1) {
-            if (arr[i] == key)
-                return true;
-            i = (i + 1) % cap;
-
-            if (i == h)
-                return false;
-        }
-        return false;
-    }
-
-    //inserting using hashing
+       //inserting using hashing
     boolean insert(int key) {
         if (size == cap)
             return false;
@@ -63,4 +42,26 @@ public class MyHash {
         }
         return false;
     }
+
+    //hash function
+    int hash(int key) {
+        return key % cap;
+    }
+
+    //searching using hashing
+    boolean search(int key) {
+        int h = hash(key);
+        int i = h;
+        while (arr[i] != -1) {
+            if (arr[i] == key)
+                return true;
+            i = (i + 1) % cap;
+
+            if (i == h)
+                return false;
+        }
+        return false;
+    }
+
+ 
 }
