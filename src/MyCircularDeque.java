@@ -28,14 +28,18 @@ class MyCircularDeque {
      * Adds an item at the rear of Deque. Return true if the operation is successful.
      */
     public boolean insertLast(int value) {
-
+        if(rear!=k)
+        {
+            queue[rear+1]=value;
+        }
+     
     }
 
     /**
      * Deletes an item from the front of Deque. Return true if the operation is successful.
      */
     public boolean deleteFront() {
-
+         
     }
 
     /**

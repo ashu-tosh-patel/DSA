@@ -6,6 +6,7 @@ public class Array {
             psum[i] = psum[i - 1] + a[i];
         return psum;
     }
+    
 
     void printArray(int[] a) {
         for (int i : a)
