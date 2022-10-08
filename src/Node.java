@@ -16,5 +16,6 @@ class Node<Type> {
     Node temp = new Node(val);
     temp.next = head;
     head = temp;
+    //done
 }
 }
