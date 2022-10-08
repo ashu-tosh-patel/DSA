@@ -10,8 +10,11 @@ class Node<Type> {
         data = d;
         next = n;
     }
-
-    public Node() {
-
-    }
+// inserting node
+    public void push(int val)
+{
+    Node temp = new Node(val);
+    temp.next = head;
+    head = temp;
+}
 }

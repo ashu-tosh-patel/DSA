@@ -98,8 +98,6 @@ public class LinkedList <Type> {
     int size(){
         return size;
     }
-
-
     void printLinkedList() {
         for (Node<Type> i = head; i != null; i = i.next) {
             System.out.print(i.data+" ");

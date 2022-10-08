@@ -33,5 +33,6 @@ public class ArrayList {
         capacity *= 2;
         arr = temp;
     }
+    
 
 }
