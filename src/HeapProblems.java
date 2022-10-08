@@ -8,6 +8,14 @@ public class HeapProblems {
         }
         return max;
     }
+    
+    
+    //problem 12: merge 2 binary heaps
+    public void merge(Heap h1, Heap h2) {
+        while (h2.count != 0) {
+            h1.insert(h2.getMaximum());
+        }
+    }
 
     //problem 9: find max element in min Heap;
     public int Delete(Heap h, int i) {
@@ -19,6 +27,14 @@ public class HeapProblems {
         h.percolateDown(i);
         return key;
     }
+    
+    //problem 15: find kth largest element
+    public int findkth(Heap h, int k) {
+        for (int i = 0; i < k - 1; i++) {
+            h.deleteMax();
+        }
+        return h.deleteMax();
+    }
 
     //problem 11: print all elements less than val
     public void lessThan(Heap h, int val) {
@@ -28,12 +44,6 @@ public class HeapProblems {
         }
     }
 
-    //problem 12: merge 2 binary heaps
-    public void merge(Heap h1, Heap h2) {
-        while (h2.count != 0) {
-            h1.insert(h2.getMaximum());
-        }
-    }
 
     //problem 13: merge 2 binary heaps without heapify (using Build heap)
     public void mergeTwo(Heap h1, Heap h2) {
@@ -45,13 +55,7 @@ public class HeapProblems {
         }
     }
 
-    //problem 15: find kth largest element
-    public int findkth(Heap h, int k) {
-        for (int i = 0; i < k - 1; i++) {
-            h.deleteMax();
-        }
-        return h.deleteMax();
-    }
+    
 
 
 }
