@@ -6,7 +6,15 @@ public class Array {
             psum[i] = psum[i - 1] + a[i];
         return psum;
     }
-    
+      int maxelement(int a[])
+      {
+        int mx=Integer.MIN_VALUE;
+        for(int i:a)
+        {
+            mx=Math.max(mx,i);
+        }
+        return mx;
+      }
 
     void printArray(int[] a) {
         for (int i : a)
