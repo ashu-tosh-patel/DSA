@@ -1,28 +1,36 @@
 #include<bits/stdc++.h>
 using namespace std;
-int quicksort(int arr[], int st, int end){
-    int pivot=arr[end];
-    int j=st-1;
-    for(int i=st ; i<end ;i++){
-        if(arr[i]<pivot){
-            j++;
-            swap(arr[i],arr[j]);
-        }
+void merge(int arr[], int st, int mid, int end){
+    int n1=mid-st+1,n2=end-mid;
+    int left[n1],right[n2];
+    for(int i=0 ; i<n1 ;i++){
+        left[i]=arr[i+st];
     }
-    swap(arr[j+1],arr[end]);
-    return j+1;
+    for(int j=0 ; j<n2 ;j++){
+        right[j]=arr[j+mid+1];
+    }
+    int i=0,j=0;
+    while(i<n1&&j<n2){
+        if(left[i]<right[j]){
+            arr[st++]=left[i++];
+        }
+        else arr[st++]=right[j++];
+    }
+    while(i<n1) arr[st++]=left[i++];
+    while(j<n2) arr[st++]=right[j++];
 }
-void quick_sort(int arr[], int st,int end){
+void merge_sort(int arr[], int st, int end){
     if(st<end){
-        int pivot=quicksort(arr,st,end);
-        quick_sort(arr,st,pivot-1);
-        quick_sort(arr,pivot+1,end);
+        int mid=(st+end)/2;
+        merge_sort(arr,st,mid);
+        merge_sort(arr,mid+1,end);
+        merge(arr,st,mid,end);
     }
 }
 int main(){
-    int arr[]={1,2,4,3,-1,5,6,7,9};
+    int arr[]={6,3,2,1,10,9,8,4};
     int n=sizeof(arr)/sizeof(arr[0]);
-    quick_sort(arr,0,n-1);
+    merge_sort(arr,0,n-1);
     for(auto i:arr ) cout<<i<<" ";
     return 0;
 }
